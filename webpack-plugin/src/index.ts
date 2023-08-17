@@ -184,7 +184,7 @@ class MonacoEditorWebpackPlugin implements webpack.WebpackPluginInstance {
 		const logger = compiler.getInfrastructureLogger(
 							"MonacoEditorWebpackPlugin"
 						);
-      		logger.warn(`options: ${this.options}!`);
+      		logger.warn(`options: ${JSON.stringify(this.options)}!`);
 		const modules = [EDITOR_MODULE].concat(languages).concat(features);
 		const workers: ILabeledWorkerDefinition[] = [];
 		modules.forEach((module) => {
