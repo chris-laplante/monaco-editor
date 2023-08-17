@@ -8,9 +8,9 @@ import { ILoaderOptions } from './loaders/include';
 import { EditorLanguage, EditorFeature, NegatedEditorFeature } from 'monaco-editor/esm/metadata';
 	
 console.warn("LOG PLEASE");
-throw new Error(
-					"BLAH BLAH BLAH"
-				);
+// throw new Error(
+// 					"BLAH BLAH BLAH"
+// 				);
 const INCLUDE_LOADER_PATH = require.resolve('./loaders/include');
 
 const EDITOR_MODULE: IFeatureDefinition = {
