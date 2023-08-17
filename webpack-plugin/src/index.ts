@@ -186,9 +186,6 @@ class MonacoEditorWebpackPlugin implements webpack.WebpackPluginInstance {
 						);
       		logger.warn(`options: ${JSON.stringify(this.options)}!`);
 
-
-		 throw new Error("BLAH BLAH BLAH");
-		
 		const modules = [EDITOR_MODULE].concat(languages).concat(features);
 		const workers: ILabeledWorkerDefinition[] = [];
 		modules.forEach((module) => {
@@ -210,9 +207,16 @@ class MonacoEditorWebpackPlugin implements webpack.WebpackPluginInstance {
 			compilationPublicPath,
 			globalAPI
 		);
+		logger.warn(`rules: ${JSON.stringify(rules)}`)
 		const plugins = createPlugins(compiler, workers, filename, monacoEditorPath);
+		logger.warn(`plugins: ${JSON.stringify(plugins)}`)
 		addCompilerRules(compiler, rules);
 		addCompilerPlugins(compiler, plugins);
+
+		
+
+		 throw new Error("BLAH BLAH BLAH");
+		
 	}
 }
 
