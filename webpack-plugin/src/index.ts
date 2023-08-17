@@ -7,6 +7,8 @@ import { IFeatureDefinition } from './types';
 import { ILoaderOptions } from './loaders/include';
 import { EditorLanguage, EditorFeature, NegatedEditorFeature } from 'monaco-editor/esm/metadata';
 
+console.warn("LOG PLEASE");
+
 const INCLUDE_LOADER_PATH = require.resolve('./loaders/include');
 
 const EDITOR_MODULE: IFeatureDefinition = {
