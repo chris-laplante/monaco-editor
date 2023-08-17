@@ -6,11 +6,11 @@ import { AddWorkerEntryPointPlugin } from './plugins/AddWorkerEntryPointPlugin';
 import { IFeatureDefinition } from './types';
 import { ILoaderOptions } from './loaders/include';
 import { EditorLanguage, EditorFeature, NegatedEditorFeature } from 'monaco-editor/esm/metadata';
-	throw new Error(
+	
+console.warn("LOG PLEASE");
+throw new Error(
 					"BLAH BLAH BLAH"
 				);
-console.warn("LOG PLEASE");
-
 const INCLUDE_LOADER_PATH = require.resolve('./loaders/include');
 
 const EDITOR_MODULE: IFeatureDefinition = {
