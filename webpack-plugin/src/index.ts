@@ -177,6 +177,10 @@ class MonacoEditorWebpackPlugin implements webpack.WebpackPluginInstance {
 	apply(compiler: webpack.Compiler): void {
 		const { languages, features, filename, monacoEditorPath, publicPath, globalAPI } = this.options;
 		const compilationPublicPath = getCompilationPublicPath(compiler);
+		const logger = compiler.getInfrastructureLogger(
+							"MonacoEditorWebpackPlugin"
+						);
+      		logger.warn(`Doing something in apply!`);
 		const modules = [EDITOR_MODULE].concat(languages).concat(features);
 		const workers: ILabeledWorkerDefinition[] = [];
 		modules.forEach((module) => {
